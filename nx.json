@@ -7,5 +7,12 @@
     "tslint.json": "*",
     "nx.json": "*"
   },
-  "projects": {}
+  "projects": {
+    "michaelwestphal": {
+      "tags": []
+    },
+    "michaelwestphal-e2e": {
+      "tags": []
+    }
+  }
 }
