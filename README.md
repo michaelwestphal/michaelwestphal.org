@@ -25,9 +25,9 @@ Legend of annotations:
 
 - [x] Add [Angular Material](https://material.angular.io/) for theming and components.
 - [x] Create bare-bones markup of my résumé.
-- [ ] 🏃 Configure and push to [Firebase hosting](https://firebase.google.com/docs/hosting/)
+- [x] Configure and push to [Firebase hosting](https://firebase.google.com/docs/hosting/)
 - [ ] Automate push to Firebase hosting on push to `master`
-- [ ] Add [NgRx](https://ngrx.io/)
+- [ ] 🏃 Add [NgRx](https://ngrx.io/)
     - [ ] Retrieve résumé content from a [`Store`](https://ngrx.io/guide/store)
     - [ ] Make résumé sections editable and utilize `ngrx` for state management  
         - [ ] "click to edit" components
