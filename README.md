@@ -14,11 +14,18 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Iteration plan
 
-A high-level iteration plan of the details I hope to achieve in this project.
+A roughly ordered high-level iteration plan of the details I hope to achieve in this project.
 
-- [ ] Create bare-bones markup of my résumé.
+Legend of annotations:
+
+| Mark | Description |
+| --- | --- |
+| 🏃 | Work in progress. |
+| 💪 | Stretch goal. |
+
 - [x] Add [Angular Material](https://material.angular.io/) for theming and components.
-- [ ] Configure and push to [Firebase hosting](https://firebase.google.com/docs/hosting/)
+- [x] Create bare-bones markup of my résumé.
+- [ ] 🏃 Configure and push to [Firebase hosting](https://firebase.google.com/docs/hosting/)
 - [ ] Automate push to Firebase hosting on push to `master`
 - [ ] Add [NgRx](https://ngrx.io/)
     - [ ] Retrieve résumé content from a [`Store`](https://ngrx.io/guide/store)
@@ -30,17 +37,14 @@ A high-level iteration plan of the details I hope to achieve in this project.
     - [ ] Populate initial `ngrx` store state from Firestore.
     - [ ] Keep json form of résumé for population of Firestore.
 - [ ] Write tests for "complicated enough" components (utilize [Jest](https://jestjs.io/))
-
-### Stretch Goals
-
 - [ ] Create truly modifiable résumé experience.
     - [ ] Add basic authentication using Google Authentication provider in Firebase
     - [ ] Utilize Firebase function to clone résumé content unique to logged in user
     - [ ] Incorporate Firestore into the `ngrx` state changes (via [Effects](https://ngrx.io/guide/effects) I believe)
 - [ ] Further "beautification" - Styling is not my strong suit.
     - [ ] Create "light/dark" theme toggle component/functionality. 
-- [ ] End-to-end test suite with [Cypress](https://www.cypress.io/)
-- [ ] Implement a search component which "live shows content related to the search and hides the rest" within my résumé.
+- [ ] 💪 End-to-end test suite with [Cypress](https://www.cypress.io/)
+- [ ] 💪 Implement a search component which "live shows content related to the search and hides the rest" within my résumé.
 
 ## Acknowledgements
 

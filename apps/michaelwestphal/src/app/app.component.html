@@ -1,20 +1,100 @@
-<div style="text-align:center">
-  <h1>Welcome to {{ title }}!</h1>
-  <img
-    width="300"
-    src="https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png"
-  />
-</div>
+<mat-toolbar [color]="'primary'">
+  <span>Michael Westphal</span>
+  <span>
+    <a
+      mat-button
+      href="https://github.com/michaelwestphal/michaelwestphal.org"
+      aria-label="GitHub Repository"
+    >
+      <img
+        src="../assets/github-circle-white-transparent.svg"
+        alt="GitHub logo"
+      />&nbsp;GitHub
+    </a>
+  </span>
+</mat-toolbar>
 
-<h2>This is an Angular CLI app built with Nrwl Nx!</h2>
+<h2>Résumé</h2>
+<h3>Michael Westphal - Web Developer from Eau Claire, WI</h3>
 
-An open source toolkit for enterprise Angular applications. Nx is designed to
-help you create and build enterprise grade Angular applications. It provides an
-opinionated approach to application project structure and patterns.
+<mat-divider></mat-divider>
 
-<h2>Quick Start & Documentation</h2>
+<section>
+  <mat-list>
+    <mat-list-item>
+      <strong>Email</strong
+      ><a mat-button href="mailto:hello@michaelwestphal.org"
+        >hello@michaelwestphal.org</a
+      >
+    </mat-list-item>
+    <mat-list-item>
+      <strong>GitHub</strong
+      ><a mat-button href="https://github.com/michaelwestphal"
+        >michaelwestphal</a
+      >
+    </mat-list-item>
+    <mat-list-item>
+      <strong>Linkedin</strong
+      ><a mat-button href="https://linkedin.com/in/michael-e-westphal/"
+        >michael-e-westphal</a
+      >
+    </mat-list-item>
+  </mat-list>
+</section>
 
-<a href="https://nrwl.io/nx"
-  >Watch a 5-minute video on how to get started with Nx.</a
->
-<router-outlet></router-outlet>
+<mat-divider></mat-divider>
+
+<section>
+  <h3>Skills</h3>
+  <mat-list cdkDropList (cdkDropListDropped)="drop($event)">
+    <mat-list-item *ngFor="let skill of skills" matRipple cdkDrag>
+      <strong>{{ skill.type }}</strong> &nbsp;{{ skill.keywords }}
+    </mat-list-item>
+  </mat-list>
+</section>
+
+<mat-divider></mat-divider>
+
+<section>
+  <h3>Work History</h3>
+  <mat-list *ngFor="let history of workHistory">
+    <strong
+      >{{ history.company }} ({{ history.startingDate }} &mdash;
+      {{ history.endingDate }})</strong
+    >
+    {{ history.shortDescription }}
+    <mat-list-item *ngFor="let position of history.positions">
+      <strong>{{ position.title }}</strong> &nbsp;({{
+        position.startingDate
+      }}
+      &mdash; {{ position.endingDate }})
+    </mat-list-item>
+  </mat-list>
+</section>
+
+<mat-divider></mat-divider>
+
+<section>
+  <h3>Education</h3>
+  <mat-list>
+    <mat-list-item *ngFor="let education of education">
+      <strong>{{ education.institutionName }}</strong
+      >, {{ education.institutionLocation }}
+      ({{ education.startingDate }} &mdash;
+      {{ education.endingDate }}) &mdash; {{ education.degree }}
+    </mat-list-item>
+  </mat-list>
+</section>
+
+<mat-divider></mat-divider>
+
+<section>
+  <h3>Interests</h3>
+  <mat-list>
+    <mat-list-item *ngFor="let interest of interests">
+      <strong>{{interest.name}}.</strong>&nbsp;{{interest.details}}
+    </mat-list-item>
+  </mat-list>
+</section>
+
+<!-- <router-outlet></router-outlet> -->
