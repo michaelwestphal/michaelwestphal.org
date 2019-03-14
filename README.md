@@ -1,44 +1,48 @@
-# Michaelwestphal
+# `michaelwestphal.org`
+
+**Problem:** The vast majority of the work I have done over the last roughly 14 years has been on proprietary systems. How do I begin to give a picture of my capabilities and interests?
+
+**Solution:** Create an example project using the tools and techniques that I am interested in pursuing. This repository for my tiny personal website (online résumé) will give an iterative *glimpse* into my capabilities.
+
+## Tools and Technologies Chosen
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) using [Nrwl Nx](https://nrwl.io/nx).
 
-## Nrwl Extensions for Angular (Nx)
+* [Angular](https://angular.io)
+* [Material Design](https://material.io/) via [Angular Material](https://material.angular.io/)
+    * Please see the [Getting started](https://material.angular.io/guide/getting-started) guide. (Hint: Basically as easy as running `ng add @angular/material`)
 
-<a href="https://nrwl.io/nx"><img src="https://preview.ibb.co/mW6sdw/nx_logo.png"></a>
+## Iteration plan
 
-Nx is an open source toolkit for enterprise Angular applications.
+A high-level iteration plan of the details I hope to achieve in this project.
 
-Nx is designed to help you create and build enterprise grade Angular applications. It provides an opinionated approach to application project structure and patterns.
+- [ ] Create bare-bones markup of my résumé.
+- [x] Add [Angular Material](https://material.angular.io/) for theming and components.
+- [ ] Configure and push to [Firebase hosting](https://firebase.google.com/docs/hosting/)
+- [ ] Automate push to Firebase hosting on push to `master`
+- [ ] Add [NgRx](https://ngrx.io/)
+    - [ ] Retrieve résumé content from a [`Store`](https://ngrx.io/guide/store)
+    - [ ] Make résumé sections editable and utilize `ngrx` for state management  
+        - [ ] "click to edit" components
+        - [ ] "drag-n-drop" reordering of content
+- [ ] Store résumé content in [Cloud Firestore](https://firebase.google.com/docs/firestore/)
+    - [ ] Write security rule to make the data read-only
+    - [ ] Populate initial `ngrx` store state from Firestore.
+    - [ ] Keep json form of résumé for population of Firestore.
+- [ ] Write tests for "complicated enough" components (utilize [Jest](https://jestjs.io/))
 
-## Quick Start & Documentation
+### Stretch Goals
 
-[Watch a 5-minute video on how to get started with Nx.](http://nrwl.io/nx)
+- [ ] Create truly modifiable résumé experience.
+    - [ ] Add basic authentication using Google Authentication provider in Firebase
+    - [ ] Utilize Firebase function to clone résumé content unique to logged in user
+    - [ ] Incorporate Firestore into the `ngrx` state changes (via [Effects](https://ngrx.io/guide/effects) I believe)
+- [ ] Further "beautification" - Styling is not my strong suit.
+    - [ ] Create "light/dark" theme toggle component/functionality. 
+- [ ] End-to-end test suite with [Cypress](https://www.cypress.io/)
+- [ ] Implement a search component which "live shows content related to the search and hides the rest" within my résumé.
 
-## Generate your first application
+## Acknowledgements
 
-Run `ng generate app myapp` to generate an application. When using Nx, you can create multiple applications and libraries in the same CLI workspace. Read more [here](http://nrwl.io/nx).
-
-## Development server
-
-Run `ng serve --project=myapp` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name --project=myapp` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build --project=myapp` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+*This will be the location where I acknowledge "prior work" that 
+will have inspired various solutions to the problems solved above.*
