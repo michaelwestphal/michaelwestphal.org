@@ -26,7 +26,10 @@
               "apps/michaelwestphal/src/favicon.ico",
               "apps/michaelwestphal/src/assets"
             ],
-            "styles": ["apps/michaelwestphal/src/styles.scss"],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
+              "apps/michaelwestphal/src/styles.scss"
+            ],
             "scripts": [],
             "es5BrowserSupport": true
           },
@@ -81,7 +84,9 @@
               "apps/michaelwestphal/tsconfig.app.json",
               "apps/michaelwestphal/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "test": {
@@ -116,7 +121,9 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/michaelwestphal-e2e/tsconfig.e2e.json",
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }
