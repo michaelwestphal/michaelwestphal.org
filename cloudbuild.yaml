@@ -1,0 +1,26 @@
+steps:
+# Install
+# - name: 'gcr.io/cloud-builders/yarn'
+- name: node:10.15.3
+  entrypoint: yarn
+  args: []
+# Lint
+- name: node:10.15.3
+  entrypoint: yarn
+  args: ['lint']
+# Test
+# - name: node:10.15.3
+#   entrypoint: yarn
+#   args: ['test']
+# Build
+- name: node:10.15.3
+  entrypoint: yarn
+  args: ['build', '--prod']
+# Build
+- name: node:10.15.3
+  entrypoint: yarn
+  args: ['build', '--prod']
+# Deploy
+- name: node:10.15.3
+  entrypoint: yarn
+  args: ['firebase', 'deploy']
