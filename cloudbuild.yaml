@@ -1,26 +1,29 @@
 steps:
 # Install
 # - name: 'gcr.io/cloud-builders/yarn'
-- name: node:10.15.3
-  entrypoint: yarn
+- name: $_NODE_VERSION
+  entrypoint: $_PACKAGE_MANAGER
   args: []
 # Lint
-- name: node:10.15.3
-  entrypoint: yarn
+- name: $_NODE_VERSION
+  entrypoint: $_PACKAGE_MANAGER
   args: ['lint']
 # Test
-# - name: node:10.15.3
-#   entrypoint: yarn
+# - name: $_NODE_VERSION
+# entrypoint: $_PACKAGE_MANAGER
 #   args: ['test']
 # Build
-- name: node:10.15.3
-  entrypoint: yarn
+- name: $_NODE_VERSION
+  entrypoint: $_PACKAGE_MANAGER
   args: ['build', '--prod']
 # Build
-- name: node:10.15.3
-  entrypoint: yarn
+- name: $_NODE_VERSION
+  entrypoint: $_PACKAGE_MANAGER
   args: ['build', '--prod']
 # Deploy
-- name: node:10.15.3
-  entrypoint: yarn
+- name: $_NODE_VERSION
+  entrypoint: $_PACKAGE_MANAGER
   args: ['firebase', 'deploy']
+substitutions:
+  _NODE_VERSION: node:10.15.3
+  _PACKAGE_MANAGER: yarn
